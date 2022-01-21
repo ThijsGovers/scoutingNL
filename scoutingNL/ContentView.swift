@@ -51,11 +51,7 @@ struct ContentView: View {
                     .tabItem {
                     Label("Vrienden", systemImage: "person.3")
                     }
-            }
-            
-            
-            
-        
+             }
     }
 }
 
