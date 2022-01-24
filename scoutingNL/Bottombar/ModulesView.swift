@@ -42,32 +42,31 @@ struct ModulesView: View {
         var body: some View {
             
                 ScrollView{
+                    VStack (alignment: .leading){
+                        Text("Agenda")
+                            .font(.title)
                     
-                    Text("Agenda")
-                        .font(.title)
-                
-                    VStack(alignment: .leading){
-                    Text("Deze week").multilineTextAlignment(.leading)
-                    
-                    Text("15 Dec. vergadering met alle leiders").multilineTextAlignment(.leading)
+                        VStack(alignment: .leading){
+                        Text("Deze week").multilineTextAlignment(.leading)
                         
-                    Text("18 Dec. opkomst draaien welpen").multilineTextAlignment(.leading)
-                        
-                        Button(action: {}) {
-                            Image(systemName: "arrow.right")
-                        }.padding(.leading, 250)
-                            .foregroundColor(Color("Purple"))
+                        Text("15 Dec. vergadering met alle leiders").multilineTextAlignment(.leading)
                             
-                        
+                        Text("18 Dec. opkomst draaien welpen").multilineTextAlignment(.leading)
+                            
+                            Button(action: {}) {
+                                Image(systemName: "arrow.right")
+                            }.padding(.leading, 250)
+                                .foregroundColor(Color("Purple"))
+                                
+                            
+                        }
+                        .padding(.horizontal, 55)
+                        .padding(.vertical, 20)
+                        .background(Color("yellowColor"))
+                        .cornerRadius(15)
+                            
+                        Text("Modules").font(.title)
                     }
-                    .padding(.horizontal, 55)
-                    .padding(.vertical, 20)
-                    .background(Color("yellowColor"))
-                    .cornerRadius(15)
-                        
-                        
-                        
-                    
                     GeometryReader {geo in // Liever niet, maar werkt wel goed
                         LazyVGrid(columns:  [GridItem(.adaptive(minimum:geo.size.width / 3))], spacing: 20) {
                             
